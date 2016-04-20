@@ -1,0 +1,18 @@
+{
+  "name": "pitchr-backend",
+  "version": "1.0.0",
+  "description": "Backend for Pitchr",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "now": "^0.9.19",
+    "serve": "^1.4.0"
+  }
+}

@@ -1,0 +1,74 @@
+<ion-view title="Pitchr" id="closeTab" ng-controller="TabController">
+    <ion-content padding="true" class="has-header"></ion-content>
+        <ion-list style="font-size: 20px !important; color: black; font-weight: bold; padding: 100cm 1cm 0cm 0cm;">
+        <br>
+        <ion-item >
+            <span style="font-size: 26px !important; color: black; font-weight: bold;padding-top: 10cm;" > Close Out</span>
+        </ion-item>
+            <ion-item  ng-repeat="item in items" >
+                Drink: {{ item.desc }}
+                <br>
+                Price: ${{ item.price }}
+            </ion-item>
+            <br>
+            <span style="float: right;padding: 0cm 1cm 1cm 1cm ">Sub Total: ${{total}}</span>
+            <br><br>
+            <div style="float: left;padding: 0cm 0cm 0cm 0cm ">Tip Amount     </div> 
+            <br><br>
+            <div class="button-bar">
+                <a class="button button-positive" ng-click="addTip(18)">18%</a>
+                <a class="button button-positive" ng-click="addTip(20)">20%</a>
+                <a class="button button-positive" ng-click="addTip(22)">22%</a>
+                <a class="button button-positive" ng-click="addTip(22)">Custom</a>
+            </div>
+            <br><br>
+            <div style="float: right;padding: 0cm 1cm 1cm 1cm ">Total w/ Tip: ${{tipTotal}}</div>
+            <br>
+</div>
+                        <div class="button button-balanced" id="pay" ng-click="chargeCard()">Charge Card ${{tipTotal}}</div>
+        </ion-list>
+
+</ion-view>
+
+<style>
+.ion-item {
+    padding: 100cm 1cm 0cm 0cm;
+}
+#button {
+    width:50px;
+    height: 50px;
+    border-radius:100%;
+    background-color:#6b92e3;
+
+    color: white;
+padding-top: 8px;
+padding-bottom: 8px;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+.button-holder {
+    width: 100%;
+    
+}
+.pay {
+   background: limegreen;
+   font-size: 18px;
+   padding: 7.5px 15px;
+   -webkit-border-radius: 17px;
+   -moz-border-radius: 17px;
+   border-radius: 17px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   text-align: center;
+   vertical-align: middle;
+   }
+
+</style>
