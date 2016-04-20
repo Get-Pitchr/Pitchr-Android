@@ -1,0 +1,32 @@
+<ion-view title="Pitchr" id="showTab" ng-controller="TabController">
+    <ion-content padding="true" class="has-header"></ion-content>
+        <ion-list style="font-size: 20px !important; color: black; font-weight: bold; padding: 100cm 1cm 0cm 0cm;">
+        <ion-item >
+            <span ng-show="items.length <= 0" > No Drinks on your Tab, Go order some!</span>
+        </ion-item>
+            <ion-item  ng-repeat="item in items" >
+                Drink: {{ item.desc }}
+                <br>
+                Price: ${{ item.price }}
+            </ion-item>
+            <br>
+            <span style="float: right;padding: 0cm 1cm 1cm 1cm ">Total: ${{total}}</span>
+        </ion-list>
+</ion-view>
+
+<style>
+.ion-item {
+    padding: 100cm 1cm 0cm 0cm;
+}
+    
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
